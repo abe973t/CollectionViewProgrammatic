@@ -1,5 +1,5 @@
 //
-//  HeaderCollectionViewCell.swift
+//  FooterCollectionViewCell.swift
 //  CollectionViewProgrammatically
 //
 //  Created by mcs on 1/27/20.
@@ -8,30 +8,28 @@
 
 import UIKit
 
-class HeaderCollectionViewCell: UICollectionViewCell {
+class FooterCollectionViewCell: UICollectionViewCell {
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        setupHeaderViews()
+
+        setupFooterViews()
     }
 
     let titleLabel: UILabel = {
         let title = UILabel()
-        title.text = "Today"
+        title.text = "Footer 🦵"
         title.textColor = .white
         title.font = UIFont(name: "Montserrat", size: 50)
         title.translatesAutoresizingMaskIntoConstraints = false
         return title
     }()
 
-    func setupHeaderViews()   {
+    func setupFooterViews()   {
         addSubview(titleLabel)
 
         titleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-//        dateLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20).isActive = true
         titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
-//        dateLabel.widthAnchor.constraint(equalToConstant: 120).isActive = true
-//        dateLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
 
 
